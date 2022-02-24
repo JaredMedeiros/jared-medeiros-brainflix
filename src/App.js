@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Header from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Header/Header.js';
 
 function App() {
   return (
