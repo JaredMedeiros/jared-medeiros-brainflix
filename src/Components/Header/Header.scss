@@ -1,6 +1,8 @@
 @use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_reset.scss' as *;
 @use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_fonts.scss' as *;
 @use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_colors.scss' as *;
+@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_variables.scss' as *;
+@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_mixins.scss' as *;
 
 body{
     font-size: 13px;
@@ -15,18 +17,56 @@ body{
     font-family: 'AvenirNext';
     padding: 0 1rem 0 1rem;
     
+    
+    @include tablet {
+        padding: 0 2.25rem 0 2.25rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    @include desktop {
+        padding: 0 3.9375rem 0 3.9375rem;
+    }
+    
     &__logo {
         width: 7.5rem;
         height: 1.5625rem;
         padding:1rem;
     }
 
-    &__container1 {
+    &__logo-container {
+        @include tablet {
+            width: 20%;
+        }
+    }
+
+    &__inner-container {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+
+        @include tablet {
+            width: 60%;
+            
+
+        }
+    }
+
+
+    &__search-and-upload {
+        @include mobile {
+            width: 100%;
+        }
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 60%;
+        }
+
     }
 
     &__search-bar {
@@ -40,6 +80,18 @@ body{
         justify-content: flex-start;
         align-items: center;
         margin-right: 1rem;
+
+        @include tablet {
+            height: 2.5rem;
+            width: 60%;
+            margin-right: 0;
+            margin-left:5rem;
+        }
+
+        @include desktop {
+            width: 50%;
+            margin-left: 12rem;
+        }
     }
 
     &__search-bar-icon {
@@ -50,6 +102,25 @@ body{
         width: 2.25rem;
         height: 2.25rem;
         border-radius: 50%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__profile-photo--tablet {
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            margin: 1rem 0 1rem 1rem;
+    
+    
+        }
     }
 
     &__upload-button {
@@ -64,9 +135,18 @@ body{
         padding: .65rem;
         margin: 1rem 0 1rem 0;
 
+        @include tablet {
+            height: 2.5rem;
+            padding: 0 1rem 0 1rem;
+            width: 25%;
+        }
+
+        @include desktop {
+            width: 15%;
+        }
+
     }
     &__upload-button-text {
-        position: absolute;
         margin-left: auto;
         margin-right: auto;
         left: 0;
