@@ -1,4 +1,4 @@
-
+import '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Info/Info.scss'
 import viewsIcon from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/assets/Icons/views.svg';
 import likesIcon from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/assets/Icons/likes.svg';
 import videoDetails from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Data/video-details.json';
@@ -14,28 +14,33 @@ const dateStamp =
     videoDate.getFullYear();
 const viewsDisplay = videoInfo.views;  
 const likesDisplay = videoInfo.likes;
+const videoTitle = videoInfo.title
+const videoDescription = videoInfo.description;
 
     const Info = () => {
         return (
             <section className = "info">
                 <h1 className = "info__title">
-                    { videoInfo.title }
+                    { videoTitle }
                 </h1>
                 <div className = "info__data">
                     <div className = "info__data-left">
                         <h3>{  videoAuthor  }</h3>
-                        <p>{ dateStamp }</p>
+                        <p className = "info__numerical">{ dateStamp }</p>
                     </div>
                     <div className = "info__data-right">
                         <div className = "info__views">
-                            <img src = { viewsIcon } />
-                            <p>{ viewsDisplay }</p>
+                            <img className = "info__icon" src = { viewsIcon } />
+                            <p className = "info__numerical" >{ viewsDisplay }</p>
                         </div>
                         <div className = "info__likes">
-                            <img src = { likesIcon }/>
-                            <p>{ likesDisplay }</p>
+                            <img className = "info__icon" src = { likesIcon }/>
+                            <p className = "info__numerical" >{ likesDisplay }</p>
                         </div>
                     </div>
+                </div>
+                <div className = "info__description">
+                        <p>{ videoDescription }</p>
                 </div>
             </section>
         )

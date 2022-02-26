@@ -1,0 +1,133 @@
+@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_reset.scss' as *;
+@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_fonts.scss' as *;
+@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_colors.scss' as *;
+@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_variables.scss' as *;
+@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_mixins.scss' as *;
+
+body {
+    font-family: 'AvenirNext';
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+h1 {
+    font-family: AvenirNext;
+    font-size: 1.5rem;
+    font-weight:  700;
+    line-height: 2rem;
+
+    @include tablet {
+       font-size: 2.0625rem; 
+       line-height: 2.75rem;
+    }
+}
+
+h3 {
+    font-family: 'AvenirNext';
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        padding-right: 2rem;
+    }
+}
+
+.info {
+    padding: 1rem;
+
+    @include tablet {
+        padding: 2.25rem;
+    }
+
+    @include desktop {
+        padding-left: 3.9375rem;
+        padding-right: 3.9375rem;
+    }
+
+    &__title {
+        padding-bottom: 1rem;
+        border-bottom: 0.0625rem solid $mercury;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__data {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: space-between;
+        padding-bottom: .5rem;
+        border-bottom: 0.0625rem solid $mercury;
+    }
+
+    &__data-left {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+
+        @include tablet {
+            flex-direction: row;
+            width: 70%;
+        }
+
+        @include desktop {
+            width: 80%;
+        }
+    }
+
+    &__data-right {
+        display:flex;
+        flex-direction: column;
+        width: 40%;
+
+        @include tablet {
+            flex-direction: row;
+            width: 30%;
+        }
+
+        @include desktop {
+            width: 20%;
+        }
+    }
+
+    &__views {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__likes {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__numerical {
+        color: $silver;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            padding-right: 2rem;
+        }
+    }
+
+    &__icon{
+        padding-bottom: 1rem;
+        padding-right: .3rem;
+    }
+
+    &__description {
+        padding-top: 1rem;
+    }
+}
