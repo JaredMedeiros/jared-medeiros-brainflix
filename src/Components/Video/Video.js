@@ -2,17 +2,14 @@
 import '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Video/Video.scss';
 import videoMain from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Data/videos.json';
 
-const videoObj = videoMain[0];
+// const videoObj = videoMain[0];
 
-    const Video = () => {
+    export default function Video ({currentVideo}) {
         return (
             <section className = "video">
-                <video className = "video__hero" controls poster={videoObj.image}>
+                <video className = "video__hero" controls poster={currentVideo.image}>
                 </video>
             </section>
         )
         
-    }          
-
-
-export default Video;
+    }    
