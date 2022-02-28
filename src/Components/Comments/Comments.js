@@ -1,8 +1,5 @@
-import '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Comments/Comments.scss';
-import Comment from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Comment/Comment.js'
-
-
-
+import '../../Components/Comments/Comments.scss';
+import Comment from '../../Components/Comment/Comment.js'
 
 export default function Comments ({currentVideo}) {
     return (

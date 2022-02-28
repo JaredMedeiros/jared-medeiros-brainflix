@@ -1,10 +1,10 @@
-import '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Header/Header.scss';
-import logo from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/assets/Logo/BrainFlix-logo.svg';
-import search from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/assets/Icons/search.svg';
-import profilePhoto from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/assets/Images/Mohan-muruge.jpg';
-import uploadButton from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/assets/Icons/upload.svg'
+import '../../Components/Header/Header.scss';
+import logo from '../../assets/Logo/BrainFlix-logo.svg';
+import search from '../../assets/Icons/search.svg';
+import profilePhoto from '../../assets/Images/Mohan-muruge.jpg';
+import uploadButton from '../../assets/Icons/upload.svg'
 
-const Header = () => {
+export default function Header () {
     return(   
     <header className = "header">
         <div className = "header_logo-container">
@@ -27,5 +27,3 @@ const Header = () => {
     </header>
     )
 }
-
-export default Header;

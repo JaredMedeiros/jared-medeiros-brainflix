@@ -1,10 +1,11 @@
 import Thumbnail from '../Thumbnail/Thumbnail.js'
+import '../../Components/Next/Next.scss'
 
 export default function Next({ videoData, currentVideo, handleVideoChange }) {
     return (
-        <section className="video-list">
-            <h3>Next Videos</h3>
-            <ul className="video-list__list">
+        <section className = "video-list">
+            <h3 className = "video-list__subtitle">Next Videos</h3>
+            <ul className = "video-list__list">
             {videoData
                 .filter(video => video.id !== currentVideo.id)
                 .map(video => {

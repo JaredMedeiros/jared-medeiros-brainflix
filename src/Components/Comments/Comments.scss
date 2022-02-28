@@ -1,0 +1,16 @@
+@use '../../styles/partials/_fonts.scss' as *;
+@use '../../styles/partials/_colors.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.comments {
+    padding: 0 1rem;
+
+    @include tablet {
+        padding: 0 2.25rem; 
+    }
+
+    @include desktop {
+        padding: 0 0 3rem 3.9375rem;
+    }
+}

@@ -1,0 +1,170 @@
+@use '../../styles/partials/_fonts.scss' as *;
+@use '../../styles/partials/_colors.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+body {
+    font-family: 'AvenirNext';
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+    }
+}
+
+h3{
+    padding-bottom: .5rem;
+    color: $black;
+}
+
+.commentform {
+    padding:1rem;
+    width: calc(100% - 2rem);
+
+    @include tablet {
+        padding: 0 2.25rem;
+        width: calc(100% - 4.5rem);
+    }
+
+    @include desktop {
+        padding: 0 0 0 3.9375rem;
+        width: calc(100% - 5rem)
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+
+        @include desktop {
+            padding-right: 2rem;
+            width: 97%;
+        }
+    }
+
+    &__picture-section {
+        padding-top: .5rem;
+    }
+
+    &__picture {
+        background-image: url("../../assets/Images/Mohan-muruge.jpg");
+        background-size: cover;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+
+        @include tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        @include desktop {
+            margin-right: 1rem;
+        }
+    }
+
+    &__label {
+        font-family: 'AvenirNext';
+        font-size: 0.8125rem;
+        line-height: 1.25rem;
+        font-weight: 700;
+        color: $silver;
+        
+        @include tablet {
+            font-size: 0.875rem;
+            line-height: 1.375rem;
+            padding-right: 2rem;
+            
+        }
+    }
+
+    &__form {
+        width: 85%;
+        padding-left: 1rem;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            align-items: center;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+    }
+
+    &__input {
+        height: 6.5rem;
+        outline: none;
+        border: 0.0625rem solid $mercury;
+        font-family:'AvenirNext';
+        resize: none;
+        width: calc(100% - 2rem);
+        color: $darkblack;
+        border-radius: 0.25rem;
+        margin: .5rem 0 1rem 0;
+        padding: 0.75rem;
+
+        @include tablet {
+            width: 100%;
+            max-height: 1rem;
+            margin-right: 1rem;
+            margin: 0;
+            padding: 1rem;
+        }
+    }    
+
+    &__input:focus {
+        border-color: $blue;
+    }
+
+    &__input-container {
+        @include tablet {
+            width: 65%;
+        }
+
+        @include desktop {
+            width: 75%;
+        }
+    }
+    
+    &__cta {
+        position:relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include tablet {
+            width:25%;
+            min-width: 9.375rem;
+            height: 3rem;
+            margin-left: 5rem;
+            margin-top: 1rem;
+        }
+
+        @include desktop {
+            width: 25%;
+        }
+    }
+
+    &__button {
+        background-color: $blue;
+        outline:none;
+        border:none;
+        border-radius: 0.25rem;
+        color: $white;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    &__button:hover {
+        background-color: $darkblue;
+    }
+
+    &__icon {
+       position: absolute;
+       padding: 1rem;
+    }
+}

@@ -1,9 +1,10 @@
-import '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Main/Main.scss';
-import Video from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Video/Video.js';
-import Next from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Next/Next.js';
-import Info from '../Info/Info';
-import Comments from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Comments/Comments.js'
-import Header from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Header/Header.js';
+import '../../Components/Main/Main.scss';
+import Video from '../../Components/Video/Video.js';
+import Next from '../../Components/Next/Next.js';
+import Info from '../Info/Info.js';
+import Comments from '../../Components/Comments/Comments.js'
+import Header from '../../Components/Header/Header.js';
+import CommentForm from '../CommentForm/CommentForm.js'
 
 export default function Main({videoData, currentVideo, handleVideoChange}) {
     return (
@@ -12,20 +13,22 @@ export default function Main({videoData, currentVideo, handleVideoChange}) {
             <Video 
             currentVideo={currentVideo}
             />
-            <div>
-                <Info
-                currentVideo={currentVideo}
-                />
-                <Comments
-                currentVideo={currentVideo}
-                />
-            </div>
-            <div className = "videoData__list-container">
+            <div className = "content-wrapper">
+                <div>
+                    <Info
+                    currentVideo={currentVideo}
+                    />
+                    <CommentForm
+                        currentVideo = {currentVideo}/>
+                    <Comments
+                    currentVideo={currentVideo}
+                    />
+                </div>
                 <Next
                 videoData={videoData}
                 currentVideo={currentVideo}
                 handleVideoChange={handleVideoChange}
-            />
+                />
             </div>
         </main>
     )

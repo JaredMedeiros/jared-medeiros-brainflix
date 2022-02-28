@@ -1,0 +1,94 @@
+@use '../../styles/partials/_fonts.scss' as *;
+@use '../../styles/partials/_colors.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+h3 {
+    font-family: 'AvenirNext';
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    @include desktop {
+        line-height: 1rem;
+        padding-bottom: 0;
+    }
+}
+
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.thumbnail {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    
+    @include desktop {
+        margin-bottom: 1rem;
+    }
+
+    &__image-container {
+        background-color: $mercury;
+        width: 6.25rem;
+        height: 3.515625rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        border-radius: 0.25rem;
+
+        @include desktop {
+            margin-bottom: 1rem;
+            width: 7rem;
+            height: 4.144rem;
+        }
+    }    
+
+    &__image {
+        width: 6.25rem;
+        height: 3.7rem;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        border-radius: 0.25rem;
+        image-rendering: -moz-crisp-edges;         
+        image-rendering:   -o-crisp-edges;         
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+
+        @include desktop {
+            margin-bottom: 2rem;
+            width: 7rem;
+            height: 4.144rem;
+        }  
+    }    
+
+    &__title {
+        @include desktop {
+            width:100%;
+            margin-right: 0;
+            padding-bottom: 0;   
+        }   
+    }
+
+    &__copy {
+        color: $black;
+        width:70%;
+        padding-left: .5rem;
+    }
+}

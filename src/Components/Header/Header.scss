@@ -1,11 +1,11 @@
-@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_fonts.scss' as *;
-@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_colors.scss' as *;
-@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_variables.scss' as *;
-@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_mixins.scss' as *;
+@use '../../styles/partials/_fonts.scss' as *;
+@use '../../styles/partials/_colors.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
 
 body{
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
 }
 
 .header {
@@ -51,11 +51,8 @@ body{
 
         @include tablet {
             width: 60%;
-            
-
         }
     }
-
 
     &__search-and-upload {
         @include mobile {
@@ -75,7 +72,7 @@ body{
         background-color: $alabaster;
         width: 100%;
         height: 2.25rem;
-        border: 1px solid $mercury;
+        border: 0.0625rem solid $mercury;
         border-radius: 0.25rem;
         display: flex;
         flex-direction: row;
@@ -120,8 +117,6 @@ body{
             height: 2.5rem;
             border-radius: 50%;
             margin: 1rem 0 1rem 1rem;
-    
-    
         }
     }
 
@@ -130,7 +125,7 @@ body{
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        border-radius: 4px;
+        border-radius: 0.25rem;
         color: $white;
         background-color: $blue;
         width: calc(100% - 1rem);
@@ -146,8 +141,8 @@ body{
         @include desktop {
             width: 15%;
         }
-
     }
+    
     &__upload-button-text {
         margin-left: auto;
         margin-right: auto;

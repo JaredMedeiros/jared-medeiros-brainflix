@@ -1,9 +1,6 @@
 import React from 'react';
 import './App.scss';
 
-// import Video from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Video/Video.js';
-// import Info from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Info/Info.js'
-// import Comments from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Comments/Comments'
 import Main from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Main/Main.js'
 import videoData from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Data/video-details.json';
 
@@ -30,4 +27,5 @@ class App extends React.Component {
       )
     }  
   } 
-export default App;
+
+  export default App;

@@ -1,23 +1,22 @@
-import '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Comment/Comment.scss';
+import '../../Components/Comment/Comment.scss';
 
 export default function Comment ({ name, copy, date}) {
     return (
-        <>
-        <div> //image </div>
-        <div>
-            <ul>
-                <li>{name}</li>
-                <li>
-                    { (new Date(date)).getDate() +
-                        "/" +
-                        ((new Date(date)).getMonth() + 1) +
-                        "/" +
-                        (new Date(date)).getFullYear() }
-                </li>
-            </ul>
-            <p>{copy}</p>
+        <div className = "comment">   
+            <div className = "comment__photo"></div>
+            <div className = "comment__content">
+                <div className = "comment__identity">
+                    <h3 className = "comment__name">{name}</h3>
+                    <div className = "comment__date">
+                        {   ("0" + ((new Date(date)).getMonth() + 1)).slice(-2) +
+                            "/" +
+                            ("0" + ((new Date(date)).getDate())).slice(-2) +
+                            "/" +
+                            (new Date(date)).getFullYear() }
+                    </div>
+                </div>
+                <p className = "comment__copy">{copy}</p>
+            </div>
         </div>
-        </>
-
     );
 }

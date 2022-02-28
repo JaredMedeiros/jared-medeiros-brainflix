@@ -1,8 +1,7 @@
-// @use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_reset.scss' as *;
-@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_fonts.scss' as *;
-@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_colors.scss' as *;
-@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_variables.scss' as *;
-@use '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/styles/partials/_mixins.scss' as *;
+@use '../../styles/partials/_fonts.scss' as *;
+@use '../../styles/partials/_colors.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
 
 .video {
     width: 100%;
@@ -12,11 +11,11 @@
 
     &__hero {
         width: 100%;
+        height: 56.25vw;
         
-    @include tablet {
-        width:auto;
-        height:50vh;
-    }    
-    
+        @include tablet {
+            width:auto;
+            height:50vh;
+        }    
     }
 }
