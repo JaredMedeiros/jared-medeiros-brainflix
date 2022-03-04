@@ -1,6 +1,6 @@
 import '../../Components/Comment/Comment.scss';
 
-export default function Comment ({ name, copy, date}) {
+export default function Comment ({ name, comment, date}) {
     return (
         <div className = "comment">   
             <div className = "comment__photo"></div>
@@ -15,7 +15,7 @@ export default function Comment ({ name, copy, date}) {
                             (new Date(date)).getFullYear() }
                     </div>
                 </div>
-                <p className = "comment__copy">{copy}</p>
+                <p className = "comment__copy">{comment}</p>
             </div>
         </div>
     );

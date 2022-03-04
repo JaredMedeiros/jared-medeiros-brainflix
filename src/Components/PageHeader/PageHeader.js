@@ -1,10 +1,11 @@
-import '../../Components/Header/Header.scss';
+import './PageHeader.scss';
 import logo from '../../assets/Logo/BrainFlix-logo.svg';
 import search from '../../assets/Icons/search.svg';
 import profilePhoto from '../../assets/Images/Mohan-muruge.jpg';
 import uploadButton from '../../assets/Icons/upload.svg'
+import {NavLink} from 'react-router-dom';
 
-export default function Header () {
+export default function PageHeader () {
     return(   
     <header className = "header">
         <div className = "header_logo-container">
@@ -18,10 +19,10 @@ export default function Header () {
                 </div>
                 <img src = {profilePhoto} alt = "Profile photo" className = "header__profile-photo--mobile"/>
             </div>
-            <div  className = "header__upload-button">
+            <NavLink  className = "header__upload-button" to="/upload">
                 <img src = {uploadButton} alt = "upload button" className = "header__upload-button-icon"/>
                 <p className = "header__upload-button-text">UPLOAD</p>
-            </div>
+            </NavLink>
             <img src = {profilePhoto} alt = "Profile photo" className = "header__profile-photo--tablet"/>
         </div>
     </header>

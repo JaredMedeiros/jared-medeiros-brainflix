@@ -1,14 +1,15 @@
 import '../../Components/Comments/Comments.scss';
 import Comment from '../../Components/Comment/Comment.js'
 
-export default function Comments ({currentVideo}) {
+export default function Comments ({comments}) {
     return (
         <section className = "comments">
-            {currentVideo.comments.map((comment) => {
+            {comments.map((comment, index) => {
                 return (
                     <Comment
+                    key={index}
                     name={comment.name}
-                    copy={comment.comment}
+                    comment={comment.comment}
                     date={comment.timestamp}
                     />
                 )
