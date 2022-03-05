@@ -41,12 +41,8 @@ class App extends Component {
         <PageHeader/>
         <Switch>
           <Route path = "/" exact component = {Home} />
-          <Route 
-            path = '/video/:id'
-            render = {props => {
-              return <Home {...props} />;
-            }} />
-          <Route path = "/upload" exact component = {Upload} />
+          <Route path = '/video/:id' component = {Home} />
+          <Route path = "/upload" component = {Upload} />
         </Switch>  
       </BrowserRouter>
     );

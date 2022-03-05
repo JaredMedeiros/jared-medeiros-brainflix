@@ -1,7 +1,7 @@
 import Thumbnail from '../Thumbnail/Thumbnail.js'
 import '../../Components/Next/Next.scss'
 
-export default function Next({ videoData, currentVideo, handleVideoChange }) {
+export default function Next({ videoData, currentVideo }) {
     return (
         <section className = "video-list">
             <h3 className = "video-list__subtitle">Next Videos</h3>
@@ -16,7 +16,6 @@ export default function Next({ videoData, currentVideo, handleVideoChange }) {
                         image={video.image}
                         title={video.title}
                         channel={video.channel}
-                        handleVideoChange={handleVideoChange}
                         />
                     )
             })}
