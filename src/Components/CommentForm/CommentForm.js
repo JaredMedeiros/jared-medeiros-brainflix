@@ -5,10 +5,10 @@ const handleSubmit = (event) => {
     event.preventDefault();
   };
 
-export default function CommentForm ({currentVideo}) {
+export default function CommentForm ({comments}) {
     return (
         <div className = "commentform">
-            <h3>{currentVideo.comments.length} Comments</h3>
+            <h3>{comments.length} Comments</h3>
             <div className = "commentform__content">
                 <div className = "commentform__picture-section">
                     <div className = "commentform__picture"></div>

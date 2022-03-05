@@ -5,8 +5,6 @@ import Home from '../src/pages/Home/Home'
 import PageHeader from '../src/Components/PageHeader/PageHeader'
 import Upload from '../src/pages/Upload/Upload'
 import { Component } from 'react';
-import Main from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Components/Main/Main.js'
-import videoData from '/Users/jaredmedeiros/Desktop/jared-medeiros-brainflix/src/Data/video-details.json';
 
 // class App extends React.Component {
 //   state = {
@@ -41,8 +39,8 @@ class App extends Component {
         <PageHeader/>
         <Switch>
           <Route path = "/" exact component = {Home} />
-          <Route path = '/video/:id' component = {Home} />
           <Route path = "/upload" component = {Upload} />
+          <Route path = "/home/:videoId" component = {Home} />
         </Switch>  
       </BrowserRouter>
     );

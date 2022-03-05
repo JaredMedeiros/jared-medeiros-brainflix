@@ -9,16 +9,18 @@ const apiKey = "?api_key=<0666ca86-987e-455f-a07c-a31602e04687>"
 export default class Home extends Component {
     state = {
         videoData: [],
-        currentVideo: {}
+        currentVideo: {},
+        comments: []
     }
 
     getVideoById = (id) => {
         axios
-            .get(apiUrl + "/" + id + apiKey)
+            .get(`${apiUrl}/${id}${apiKey}`)
             .then (response => {
                 console.log(response.data);
                 this.setState({
-                    currentVideo: response.data
+                    currentVideo: response.data,
+                    comments: response.data.comments
                 })
             })
             .catch(err => console.log(err))
@@ -32,7 +34,7 @@ export default class Home extends Component {
                 this.setState({
                     videoData: response.data
                 })
-                const videoId = this.props.match.params.videoId || response.data[0].id
+                const videoId = this.props.match.params.videoId || response.data[0].id;
                 this.getVideoById(videoId)
             })
             .catch(err => console.log(err))
@@ -52,6 +54,7 @@ export default class Home extends Component {
                 <Main
                 videoData = {this.state.videoData}
                 currentVideo = {this.state.currentVideo}
+                comments={this.state.comments}
                 />
             </>
         )
