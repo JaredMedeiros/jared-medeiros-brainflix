@@ -1,13 +1,7 @@
 import './Upload.scss'
 import thumbnailPhoto from '../../assets/Images/Upload-video-preview.jpg'
 import uploadButton from '../../assets/Icons/upload.svg'
-import { NavLink } from 'react-router-dom'
 import React from 'react'
-
-const {uploadAlert} = function uploadAlert () {
-    alert("Your video has been uploaded!")
-}
-
 
 export default class Upload extends React.Component {
     state = {
