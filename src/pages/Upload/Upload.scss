@@ -42,51 +42,67 @@ h3 {
 }
 
 .upload {
-    width: 100%;
+    width: calc(100% - 2rem);
     padding: 1rem;
 
     @include tablet {
+        width: calc(100% - 4.5rem);
         padding: 2.25rem;
     }
 
     @include desktop {
+        width: calc(100% - 7.875rem);
         padding: 3.9375rem;
     }
 
     &__title {
-        padding-top: 1rem;
         padding-bottom: 1rem;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+            align-items: flex-start;
+            width: calc(100% - 2rem);
+        }
     }
 
     &__video {
-       width: calc(100% - 2rem);
+       width: 100%;
        border-radius: 0.25rem;
 
        @include tablet {
-           width: calc(100% - 4.5rem)
+           width: 45%;
+           margin-bottom: 1rem;
        }
 
        @include desktop {
-           width: calc(100% - 7.875rem)
+           width: 100%;
        }
     }
 
     &__video-container {
         width: 100%;
-    }
 
-    &__submission-container {
-        width: 100%;
+        @include desktop {
+            width: 30%;
+            padding-right: 1rem;
+        }
     }
     
     &__form {
         display: flex;
         flex-direction: column;
+        width: 100%;
+
+        @include tablet {
+            border-top: 1px solid $mercury;
+            padding-top: 2rem;
+            margin-top: 1rem;
+        }
     }
 
     &__form-label {
@@ -97,6 +113,11 @@ h3 {
     &__field-container {
         display: flex;
         flex-direction: column;
+        width: calc(100% - 2rem);
+
+        @include desktop {
+            width: 70%;
+        }
     }
 
     &__input {
@@ -105,7 +126,7 @@ h3 {
         border: 0.0625rem solid $mercury;
         font-family:'AvenirNext';
         resize: none;
-        width: calc(100% - 3.5rem);
+        width: 100%;
         color: $darkblack;
         background-color: $alabaster;
         border-radius: 0.25rem;
@@ -114,11 +135,11 @@ h3 {
 
 
        @include tablet {
-           width: calc(100% - 6rem)
+           width: 100%;
        }
 
        @include desktop {
-           width: calc(100% - 7.875rem)
+           width: 100%;
        }
     }
     
@@ -127,12 +148,12 @@ h3 {
     }
     
     &__text-area{
-        height: 6.5rem;
+        height: 4rem;
         outline: none;
         border: 0.0625rem solid $mercury;
         font-family:'AvenirNext';
         resize: none;
-        width: calc(100% - 3.5rem);
+        width: 100%;
         color: $darkblack;
         background-color: $alabaster;
         border-radius: 0.25rem;
@@ -140,11 +161,11 @@ h3 {
         padding: 0.75rem;
 
         @include tablet {
-            width: calc(100% - 6rem)
+            width: 100%;
         }
  
         @include desktop {
-            width: calc(100% - 7.875rem)
+            width: 100%;
         }
     }
     
@@ -155,6 +176,16 @@ h3 {
     &__cta-container {
         display: flex;
         flex-direction: column;
+        width: 100%; 
+
+        @include tablet {
+            border-top: 1px solid $mercury;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            align-items: center;
+        }
     }
 
     &__button-container {
@@ -162,7 +193,7 @@ h3 {
         color: $white;
         background-color: $blue;
         border: none; 
-        width: calc(100% - 2rem);
+        width: 100%;
         padding: .65rem;
         margin: 1rem 0 1rem 0;
         text-align: center;
@@ -172,11 +203,11 @@ h3 {
         align-items: center;
 
         @include tablet {
-            width: calc(100% - 4.5rem)
+            width:22%;
         }
  
         @include desktop {
-            width: calc(100% - 7.875rem)
+            width: 13%
         }
     }
 
@@ -193,20 +224,26 @@ h3 {
     }
 
     &__cancel-container {
-        width: calc(100% - .5rem);
-        text-align: center;
+        width: 100%;
 
         @include tablet {
-            width: calc(100% - 2.75rem)
+            width: 22%;
+            margin-right: 2rem;
         }
  
         @include desktop {
-            width: calc(100% - 7.875rem)
+            width: 13%;
         }
     }
 
     &__cancel-text {
         color: $blue;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding-left:1.5rem;
     }
 
     &__cancel-text:hover {

@@ -16,6 +16,7 @@ body{
     font-family: 'AvenirNext';
     width: calc(100% - 2rem);
     padding: 0 1rem 0 1rem;
+    border-bottom: 1px solid $mercury;
     
     
     @include tablet {
