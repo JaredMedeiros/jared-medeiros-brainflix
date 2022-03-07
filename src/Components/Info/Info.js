@@ -21,11 +21,11 @@ import likesIcon from '../../assets/Icons/likes.svg';
                     </div>
                     <div className = "info__data-right">
                         <div className = "info__views">
-                            <img className = "info__icon" src = { viewsIcon } />
+                            <img className = "info__icon" alt = "view counter icon" src = { viewsIcon } />
                             <p className = "info__numerical" >{ currentVideo.views }</p>
                         </div>
                         <div className = "info__likes">
-                            <img className = "info__icon" src = { likesIcon }/>
+                            <img className = "info__icon" alt = "like counter icon" src = { likesIcon }/>
                             <p className = "info__numerical" >{ currentVideo.likes }</p>
                         </div>
                     </div>

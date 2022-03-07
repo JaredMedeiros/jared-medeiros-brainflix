@@ -20,7 +20,7 @@ export default function CommentForm ({comments}) {
                     </div>
                     <div className = "commentform__cta">    
                         <button className = "commentform__button">COMMENT</button>
-                        <img className = "commentform__icon" src = {commentIcon}/>
+                        <img className = "commentform__icon" alt = "comment icon" src = {commentIcon}/>
                     </div>
                 </form>    
             </div>

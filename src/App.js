@@ -6,32 +6,6 @@ import PageHeader from '../src/Components/PageHeader/PageHeader'
 import Upload from '../src/pages/Upload/Upload'
 import { Component } from 'react';
 
-// class App extends React.Component {
-//   state = {
-//     videoData: videoData,
-//     currentVideo: videoData[0] 
-//   }
-
-//   handleVideoChange = (id) => {
-//     const newVideoId = this.state.videoData.findIndex(videoData => id === videoData.id)
-//     this.setState({
-//       currentVideo: this.state.videoData[newVideoId]
-//     })
-//   }
-
-//   render() {
-//     return (
-//       <Main
-//       videoData = {this.state.videoData}
-//       currentVideo = {this.state.currentVideo}
-//       handleVideoChange = {this.handleVideoChange}
-//       />
-//       )
-//     }  
-//   } 
-
-//   export default App;
-
 class App extends Component {
   render() {
     return (

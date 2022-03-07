@@ -74,9 +74,13 @@ export default class Upload extends React.Component {
                         </div>
                         <div className = "upload__field-container">
                             <label htmlFor = "inputTitle" className = "upload__form-label">TITLE YOUR VIDEO</label>
-                            <input type = "text" id = "inputTitle" className = "upload__input" name = "inputTitle" placeholder = "Add a title to your video" onChange={this.handleChange} value={this.state.inputTitle}></input>
+                            <input type = "text" id = "inputTitle" className = "upload__input" name = "inputTitle" placeholder = "Add a title to your video"
+                                onChange={this.handleChange} value={this.state.inputTitle}>         
+                            </input>
                             <label htmlFor = "inputUpload" className = "upload__form-label">ADD A VIDEO DESCRIPTION</label>
-                            <textarea id = "inputDescription" className = "upload__text-area" name = "inputDescription" placeholder = "Add a description to your video"  onChange={this.handleChange} value={this.state.inputDescription}></textarea>
+                            <textarea id = "inputDescription" className = "upload__text-area" name = "inputDescription" placeholder = "Add a description to your video" 
+                                onChange={this.handleChange} value={this.state.inputDescription}>
+                            </textarea>
                         </div>
                     </div>        
                     <div className = "upload__cta-container">
