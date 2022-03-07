@@ -66,6 +66,14 @@ h3 {
     &__video {
        width: calc(100% - 2rem);
        border-radius: 0.25rem;
+
+       @include tablet {
+           width: calc(100% - 4.5rem)
+       }
+
+       @include desktop {
+           width: calc(100% - 7.875rem)
+       }
     }
 
     &__video-container {
@@ -86,6 +94,64 @@ h3 {
         color: $silver;
     }
 
+    &__field-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        height: 1.25rem;
+        outline: none;
+        border: 0.0625rem solid $mercury;
+        font-family:'AvenirNext';
+        resize: none;
+        width: calc(100% - 3.5rem);
+        color: $darkblack;
+        background-color: $alabaster;
+        border-radius: 0.25rem;
+        margin: .5rem 0 1rem 0;
+        padding: 0.75rem;
+
+
+       @include tablet {
+           width: calc(100% - 6rem)
+       }
+
+       @include desktop {
+           width: calc(100% - 7.875rem)
+       }
+    }
+    
+    &__input:focus {
+        border-color: $blue;
+    }
+    
+    &__text-area{
+        height: 6.5rem;
+        outline: none;
+        border: 0.0625rem solid $mercury;
+        font-family:'AvenirNext';
+        resize: none;
+        width: calc(100% - 3.5rem);
+        color: $darkblack;
+        background-color: $alabaster;
+        border-radius: 0.25rem;
+        margin: .5rem 0 1rem 0;
+        padding: 0.75rem;
+
+        @include tablet {
+            width: calc(100% - 6rem)
+        }
+ 
+        @include desktop {
+            width: calc(100% - 7.875rem)
+        }
+    }
+    
+    &__text-area:focus {
+        border-color: $blue;
+    }
+
     &__cta-container {
         display: flex;
         flex-direction: column;
@@ -95,7 +161,8 @@ h3 {
         border-radius: 0.25rem;
         color: $white;
         background-color: $blue;
-        width: calc(100% - 3rem);
+        border: none; 
+        width: calc(100% - 2rem);
         padding: .65rem;
         margin: 1rem 0 1rem 0;
         text-align: center;
@@ -103,6 +170,14 @@ h3 {
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
+
+        @include tablet {
+            width: calc(100% - 4.5rem)
+        }
+ 
+        @include desktop {
+            width: calc(100% - 7.875rem)
+        }
     }
 
     &__button-container:hover {
@@ -118,8 +193,16 @@ h3 {
     }
 
     &__cancel-container {
-        width: 100%;
+        width: calc(100% - .5rem);
         text-align: center;
+
+        @include tablet {
+            width: calc(100% - 2.75rem)
+        }
+ 
+        @include desktop {
+            width: calc(100% - 7.875rem)
+        }
     }
 
     &__cancel-text {
@@ -131,42 +214,6 @@ h3 {
     }
 
 
-}
-
-.upload__input {
-    height: 1.25rem;
-    outline: none;
-    border: 0.0625rem solid $mercury;
-    font-family:'AvenirNext';
-    resize: none;
-    width: calc(100% - 3.5rem);
-    color: $darkblack;
-    background-color: $alabaster;
-    border-radius: 0.25rem;
-    margin: .5rem 0 1rem 0;
-    padding: 0.75rem;
-}
-
-.upload__input:focus {
-    border-color: $blue;
-}
-
-.upload__text-area{
-    height: 6.5rem;
-    outline: none;
-    border: 0.0625rem solid $mercury;
-    font-family:'AvenirNext';
-    resize: none;
-    width: calc(100% - 3.5rem);
-    color: $darkblack;
-    background-color: $alabaster;
-    border-radius: 0.25rem;
-    margin: .5rem 0 1rem 0;
-    padding: 0.75rem;
-}
-
-.upload__text-area:focus {
-    border-color: $blue;
 }
 
 ::placeholder {
