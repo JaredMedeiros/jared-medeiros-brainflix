@@ -2,61 +2,91 @@ import './Upload.scss'
 import thumbnailPhoto from '../../assets/Images/Upload-video-preview.jpg'
 import uploadButton from '../../assets/Icons/upload.svg'
 import React from 'react'
+import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 export default class Upload extends React.Component {
+    // state = {
+    //     inputTitle: "",
+    //     inputDescription: ""
+    // };
+
+    // handleChange = (event) => {
+    //     this.setState({
+    //         [event.target.name]: event.target.value
+    //     });
+    // };
+
+    // isTitle = () => {
+    //     if (this.state.inputTitle.length < 1) {
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // };
+
+    // isDescription = () => {
+    //     if (this.state.inputDescription.length < 1) {
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // };
+
+    // validForm = () => {
+    //     if (!this.state.inputTitle || !this.state.inputDescription) {
+    //         return false;
+    //     }
+    //     if (!this.isTitle()) {
+    //         return false;
+    //     }
+    //     if (!this.isDescription()) {
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    // };
+
+    // handleSubmit = (event) => {
+    //     event.preventDefault();
+
+    //     if (this.validForm()) {
+    //         alert("Thanks for uploading! Redirecting back to Homepage");
+    //         this.props.history.push("/");
+    //     } else {
+    //         alert("Your submission must have a valid Title and Description.");
+    //     }    
+    // };
+
     state = {
-        inputTitle: "",
-        inputDescription: ""
-    };
-
-    handleChange = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        });
-    };
-
-    isTitle = () => {
-        if (this.state.inputTitle.length < 1) {
-            return false;
-        } else {
-            return true;
-        }
-    };
-
-    isDescription = () => {
-        if (this.state.inputDescription.length < 1) {
-            return false;
-        } else {
-            return true;
-        }
-    };
-
-    validForm = () => {
-        if (!this.state.inputTitle || !this.state.inputDescription) {
-            return false;
-        }
-        if (!this.isTitle()) {
-            return false;
-        }
-        if (!this.isDescription()) {
-            return false;
-        } else {
-            return true;
-        }
+        redirectHome: false,
     };
 
     handleSubmit = (event) => {
         event.preventDefault();
-
-        if (this.validForm()) {
-            alert("Thanks for uploading! Redirecting back to Homepage");
-            this.props.history.push("/");
+        if (!event.target.title.value || !event.target.description.value) {
+            alert("Please be sure to include a title and description for you video!");
         } else {
-            alert("Your submission must have a valid Title and Description.");
-        }    
-    };
+            alert("Thanks for submitting! Taking you back to the homepage");
+            axios
+                .post("http://localhost:5500/videos", {
+                    title: event.target.title.value,
+                    description: event.target.description.value,
+                })
+
+                .then((response) => {
+                    console.log(response.data);
+                });
+                
+            this.setState({ redirectHome: true})    
+        }
+    }
 
     render() {
+        const redirectToHomePage = this.state.redirectHome;
+        if (redirectToHomePage) {
+            return <Redirect to="/" />;
+        }
         return (
             <div className = "upload">
             <h1 className = "upload__title">Upload Video</h1>
