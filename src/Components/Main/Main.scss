@@ -12,5 +12,10 @@ body {
     @include desktop {
         display: flex;
         flex-direction: row;
-    }    
+        
+
+    &__inner {
+        width: 100%;
+    }
+}
 }

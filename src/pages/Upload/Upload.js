@@ -64,14 +64,14 @@ export default class Upload extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        if (!event.target.title.value || !event.target.description.value) {
+        if (!event.target.inputTitle.value || !event.target.inputDescription.value) {
             alert("Please be sure to include a title and description for you video!");
         } else {
             alert("Thanks for submitting! Taking you back to the homepage");
             axios
                 .post("http://localhost:5500/videos", {
-                    title: event.target.title.value,
-                    description: event.target.description.value,
+                    title: event.target.inputTitle.value,
+                    description: event.target.inputDescription.value,
                 })
 
                 .then((response) => {

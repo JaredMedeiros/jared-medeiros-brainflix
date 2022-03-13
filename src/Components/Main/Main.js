@@ -12,7 +12,7 @@ export default function Main({videoData, currentVideo, comments}) {
             currentVideo = {currentVideo}
             />
             <div className = "content-wrapper">
-                <div>
+                <div className = "content-wrapper__inner">
                     <Info
                     currentVideo = {currentVideo}
                     />
@@ -25,10 +25,12 @@ export default function Main({videoData, currentVideo, comments}) {
                     comments = {comments}
                     />
                 </div>
+                <div>
                 <Next
                 videoData={videoData}
                 currentVideo={currentVideo}
                 />
+                </div>
             </div>
         </main>
     )
