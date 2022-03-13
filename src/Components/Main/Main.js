@@ -1,8 +1,8 @@
 import '../../Components/Main/Main.scss';
-import Video from '../../Components/Video/Video.js';
-import Next from '../../Components/Next/Next.js';
+import Video from '../Video/Video.js';
+import Next from '../Next/Next.js';
 import Info from '../Info/Info.js';
-import Comments from '../../Components/Comments/Comments.js'
+import Comments from '../Comments/Comments.js'
 import CommentForm from '../CommentForm/CommentForm.js'
 
 export default function Main({videoData, currentVideo, comments}) {

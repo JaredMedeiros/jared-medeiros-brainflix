@@ -1,5 +1,5 @@
 import '../../Components/Comments/Comments.scss';
-import Comment from '../../Components/Comment/Comment.js'
+import Comment from '../Comment/Comment.js'
 
 export default function Comments ({comments}) {
     return (

@@ -6,58 +6,6 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 
 export default class Upload extends React.Component {
-    // state = {
-    //     inputTitle: "",
-    //     inputDescription: ""
-    // };
-
-    // handleChange = (event) => {
-    //     this.setState({
-    //         [event.target.name]: event.target.value
-    //     });
-    // };
-
-    // isTitle = () => {
-    //     if (this.state.inputTitle.length < 1) {
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    // };
-
-    // isDescription = () => {
-    //     if (this.state.inputDescription.length < 1) {
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    // };
-
-    // validForm = () => {
-    //     if (!this.state.inputTitle || !this.state.inputDescription) {
-    //         return false;
-    //     }
-    //     if (!this.isTitle()) {
-    //         return false;
-    //     }
-    //     if (!this.isDescription()) {
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    // };
-
-    // handleSubmit = (event) => {
-    //     event.preventDefault();
-
-    //     if (this.validForm()) {
-    //         alert("Thanks for uploading! Redirecting back to Homepage");
-    //         this.props.history.push("/");
-    //     } else {
-    //         alert("Your submission must have a valid Title and Description.");
-    //     }    
-    // };
-
     state = {
         redirectHome: false,
     };

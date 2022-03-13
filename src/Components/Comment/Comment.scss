@@ -46,6 +46,7 @@ h3{
        @include tablet {
            width: 2.5rem;
            height: 2.5rem;
+           margin-right: .5rem;
        }
    }
 
@@ -57,7 +58,7 @@ h3{
        width: 85%;
 
        @include tablet {
-            width: 100%;
+            width: 90%;
        }
 
        @include desktop {
@@ -73,6 +74,8 @@ h3{
    }
 
    &__name {
+       color: $black;
+       
        @include tablet {
             width: 95%
         }

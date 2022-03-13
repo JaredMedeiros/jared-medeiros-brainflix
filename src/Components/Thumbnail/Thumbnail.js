@@ -1,9 +1,12 @@
 import '../../Components/Thumbnail/Thumbnail.scss'
 import {Link} from 'react-router-dom';
+import ScrollToTop from '../ScrollToTop';
 
 export default function Thumbnail({ id, image, title, channel}) {
+    
     return (
         <li className="thumbnail">
+            <ScrollToTop/>
             <Link 
             to = {`/home/${id}`}
             >  

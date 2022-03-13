@@ -17,7 +17,6 @@ export default class Home extends Component {
         axios
             .get(`${apiUrl}/${id}`)
             .then (response => {
-                console.log(response.data);
                 this.setState({
                     currentVideo: response.data,
                     comments: response.data.comments
@@ -30,7 +29,6 @@ export default class Home extends Component {
         axios
             .get(apiUrl)
             .then( response => {
-                console.log(response);
                 this.setState({
                     videoData: response.data
                 })
